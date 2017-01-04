@@ -15,7 +15,16 @@ The following conditions are satisfied:
 
 -Negative Number - skip possible - How many successive negative number is - 1 => skip
                                                                           - even number - numbering[i] < numbering[i+1] => skip(i)
-                                                                                        - numbering[i] < numbering[i+1] => skip(i+1)
+                                                                                        - numbering[i] > numbering[i+1] => skip(i+1)
                                                                           - odd number - second number is min among three => skip(i+1)
                                                                                        - not => skip(i), skip(i+2)
                  - skip impossible => plus
+1. Positive Number or Negative Number?
+2. If it is Negative Number, Is it possible to skip?
+2-1. If it is possible, How many successive Negative Number?
+2-2. If successive negative number is 1, skip the number for getting a maximal sum.
+2-3. If successive negative number is even number => numbering[i] < numbering[i+1] => skip(i)
+                                                => numbering[i] > numbering[i+1] => skip(i+1)
+2-4. If successive negative number is odd number => second number is min among three => skip(i+1)
+                                               => second number is not min among three => skip(i), skip(i+2)
+3. If it is not possible

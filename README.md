@@ -1,6 +1,6 @@
 # Algorithm_Practice
 
-<h2> Practice1 - c++ </h2>
+<h2> Practice1 - Maximal sum of array (c++) </h2>
 
 <h3> Question is.. </h3>
 
@@ -23,9 +23,9 @@ The following conditions are satisfied:
 <p>1. Positive Number or Negative Number?</p>
 <p>2. If it is Negative Number, Is it possible to skip?</p>
 <p>2-1. If it is possible, How many successive Negative Number?</p>
-<p>2-2. If successive negative number is 1, skip the number for getting a maximal sum.</p>
-<p>2-3. If successive negative number is even number => numbering[i] < numbering[i+1] => skip(i)</p>
+<p>2-1-1. If successive negative number is 1, skip the number for getting a maximal sum.</p>
+<p>2-1-2. If successive negative number is even number => numbering[i] < numbering[i+1] => skip(i)</p>
 <p>                                                => numbering[i] > numbering[i+1] => skip(i+1)</p>
-<p>2-4. If successive negative number is odd number => second number is min among three => skip(i+1)</p>
+<p>2-1-3. If successive negative number is odd number => second number is min among three => skip(i+1)</p>
 <p>                                               => second number is not min among three => skip(i), skip(i+2)</p>
-<p>3. If it is not possible</p>
+<p>2-1. If it is not possible</p>

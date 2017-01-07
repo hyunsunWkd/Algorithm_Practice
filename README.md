@@ -29,3 +29,17 @@ The following conditions are satisfied:
 <p>2-1-3. If successive negative number is odd number => second number is min among three => skip(i+1)</p>
 <p>                                               => second number is not min among three => skip(i), skip(i+2)</p>
 <p>2-1. If it is not possible</p>
+
+
+<h2> Practice2 - Delete nodes greater than x (c++) </h2>
+
+<h3> Question is.. </h3>
+
+Function should remove all nodes from the list having data values greater than x, and then return the head of the modified linked list.
+
+<h3> My algorithm is.. </h3>
+
+<p> 1. Make 'before' and 'deleteNode' pointer of linked list </p>
+<p> 2. If deleteNode is head of the linked list </p>
+<p> 3. If deleteNode is between two nodes </p>
+<p> 4. If deleteNode is tail of the linked list </p>

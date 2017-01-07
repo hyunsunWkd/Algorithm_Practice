@@ -19,7 +19,6 @@ public:
 
 ListNode *insert(ListNode *head, int data) {
 	ListNode *insertNode = new ListNode(data);
-
 	ListNode *ptr = NULL;
 	ptr = head;
 	if (ptr == NULL) {
@@ -42,9 +41,36 @@ void displayNode(ListNode *head) {
 	}
 }
 
-ListNode *deleteGreaterThanX(ListNode *list, int x) {
-
-	return list;
+ListNode *deleteGreaterThanX(ListNode *head, int x) {
+	ListNode *ptr = NULL;
+	ListNode *before, *deleteNode = NULL;
+	ptr = head;
+	if (ptr != NULL) {
+		before = ptr;
+		while (ptr->next != NULL) {
+			if (ptr->val > x) {
+				if (ptr == head) { //가장 첫번째 노드를 삭제할 경우
+					deleteNode = ptr;
+					head = ptr->next;
+					delete deleteNode;
+					ptr = head;
+				}
+				else {
+					deleteNode = ptr;
+					before->next = deleteNode->next;
+					delete deleteNode;
+					ptr = before;
+				}
+			}
+			before = ptr;
+			ptr = ptr->next;
+		}
+		if (ptr->next == NULL && ptr->val > x) {
+			before->next = NULL;
+			delete ptr;
+		}
+	}
+	return head;
 }
 
 int main()
@@ -59,6 +85,7 @@ int main()
 		list = insert(list, numbers[_numbers_i]);
 	}
 	cin >> x;
+	list = deleteGreaterThanX(list, x);
 	displayNode(list);
 
 	system("pause");

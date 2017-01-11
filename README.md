@@ -35,7 +35,7 @@ The following conditions are satisfied:
 
 <h3> Question is.. </h3>
 
-Function should remove all nodes from the list having data values greater than x, and then return the head of the modified linked list.
+The Function should remove all nodes from the list having data values greater than x, and then return the head of the modified linked list.
 
 <h3> My algorithm is.. </h3>
 
@@ -43,3 +43,14 @@ Function should remove all nodes from the list having data values greater than x
 <p> 2. If deleteNode is head of the linked list </p>
 <p> 3. If deleteNode is between two nodes </p>
 <p> 4. If deleteNode is tail of the linked list </p>
+
+
+<h2> Practice3 - Minimum Swaps (c++) </h2>
+
+<h3> Question is.. </h3>
+
+We want to rearrange the random items in a single row by decreasing popularity rating such that the rating for the ith item is always greater than the popularity rating of the (i+1)th item. The Function must return an integer denoting the minimum number of swap operations.
+
+<h3> My algorithm is.. </h3>
+
+Selection sort algorithm's the number of swap operation is the minimum. So I rearranged the  array by using selection sort.
